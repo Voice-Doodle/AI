@@ -57,3 +57,11 @@ sudo sh cuda_11.1.1_455.32.00_linux.run
   ```
   uvicorn src.main:app --host 0.0.0.0 --port 8080
   ```
+
+
+** hubert , rmvpe 모델 손상으로 clone이 제대로 안되면 수동으로 다운 **
+```
+wget https://github.com/Voice-Doodle/AI/raw/main/AI_repo/hubert_base.pt -O hubert_base.pt
+wget https://github.com/Voice-Doodle/AI/raw/main/AI_repo/rmvpe.pt -O rmvpe.pt
+```
+
