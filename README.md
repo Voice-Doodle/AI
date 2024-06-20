@@ -35,6 +35,8 @@ sudo apt-get install gcc g++
 wget https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run
 sudo sh cuda_11.1.1_455.32.00_linux.run
 ```
+<img width="647" alt="스크린샷 2024-06-20 오후 10 57 17" src="https://github.com/Voice-Doodle/AI/assets/59885850/441b076d-8d80-467f-8438-82d6312adeda">
+
 6. 환경변수 설정
    ```
    echo 'export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}' >> ~/.bashrc
