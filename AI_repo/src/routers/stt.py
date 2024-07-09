@@ -4,10 +4,10 @@ import os
 from ..utils import generate_unique_filename
 
 router = APIRouter(prefix="/stt", tags=["STT"])
+model = whisper.load_model("base")
 
 @router.post("")
 async def create_stt_file(audio_file: UploadFile = File(...)) -> str:
-    model = whisper.load_model("base")
     try:
         file_name = generate_unique_filename(audio_file.filename)
         # 파일을 디스크에 저장

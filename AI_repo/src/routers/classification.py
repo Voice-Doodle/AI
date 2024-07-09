@@ -4,12 +4,11 @@ import os
 from transformers import pipeline
 
 router = APIRouter(prefix="/classification", tags=["Classification"])
+zeroshot_classifier = pipeline("zero-shot-classification", model="MoritzLaurer/deberta-v3-large-zeroshot-v1.1-all-33")
 
 @router.post("")
 async def text_classification(text: str) -> str:
     try:
-        zeroshot_classifier = pipeline("zero-shot-classification", model="MoritzLaurer/deberta-v3-large-zeroshot-v1.1-all-33")
-
         ## finetunning을 위한 template
         hypothesis_template = "This record is about {}"
 
