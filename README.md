@@ -56,9 +56,9 @@ sudo sh cuda_11.1.1_455.32.00_linux.run
    ```
 
 9. uvicorn 실행
-  ```
-  uvicorn src.main:app --host 0.0.0.0 --port 8080
-  ```
+    ```
+    nohup uvicorn src.main:app --host 0.0.0.0 --port 8080 &
+    ```
 
 
 ** hubert , rmvpe 모델 손상으로 clone이 제대로 안되면 수동으로 다운 **
